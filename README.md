@@ -1,4 +1,4 @@
-# AniClipart: Clipart Animation with Text-to-Video Priors
+# FlexiClip: Locality-Preserving Free-Form Character Animation
 
 # Setup
 ```
