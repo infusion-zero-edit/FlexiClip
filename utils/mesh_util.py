@@ -78,11 +78,6 @@ def triangulate(cfg, all_pts, segments):
 
 def dilate(vertex, distance):
     new_poly = geo.Polygon(vertex).buffer(distance, join_style=2)  # https://gis.stackexchange.com/questions/380470/what-exactly-are-cap-style-and-join-style-in-shapely-buffer-function
-    if new_poly.type == 'MultiPolygon':
-        coords = []
-        for x in new_poly.geoms:
-            coords.extend(x.exterior.coords[:-1]) 
-        return coords
     return new_poly.exterior.coords[:-1]  # exclude duplicated start points
 
 
