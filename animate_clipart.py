@@ -219,7 +219,7 @@ if __name__ == "__main__":
 
             if cfg.opt_with_skeleton:
                 loss_skeleton = skeleton_loss(shifted_locations)
-                # loss_skeleton = cfg.skeleton_weight*loss_skeleton
+                loss_skeleton = cfg.skeleton_weight*loss_skeleton
                 loss = loss + loss_skeleton
             t_range.set_postfix({'loss': loss.item()})
 

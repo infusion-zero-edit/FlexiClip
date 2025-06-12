@@ -2,7 +2,7 @@ gpu_id=0
 
 experiment_name="flexiclip"
 targets=(
-    "flower"
+    "woman_dance3"
 )
 
 for target in "${targets[@]}"; do
@@ -23,11 +23,11 @@ for target in "${targets[@]}"; do
         --num_frames 24 \
         --inter_dim 128 \
         --loop_num 2 \
-        --guidance_scale 60 \
+        --guidance_scale 50 \
         --opt_bezier_points_with_mlp \
         --normalize_input \
         --opt_with_skeleton \
-        --skeleton_weight 15 \
+        --skeleton_weight 25 \
         --fix_start_points \
         --arap_weight 3000 \
         --max_tri_area 30 \
